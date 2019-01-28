@@ -1,0 +1,75 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vin checking</title>
+</head>
+<body>
+	<!--  <div class="page"> -->
+	<header>
+	<h1><a href="#">PDF Generating</a></h1>
+	</header>
+	<div>
+		<!--    <div class="content"> -->
+		<!-- {% block body %}{% endblock %} -->
+		<div class="panel-heading">
+			<h2 class="text-uppercase">Basic Info</h2>
+		</div>
+
+		<form action="/check/" method="post">
+		<div>
+			<label for="vin">PDF Name：</label> 
+			<input class="form-control input-sm" id="pdfname" name="pdfname" type="pdfname" placeholder="pdfname" size="80">
+			<br>
+			<label for="vin">Invoice#：</label> 
+			<input class="form-control input-sm" id="InvoiceNo" name="InvoiceNo" type="InvoiceNo" placeholder="InvoiceNo" size="80">
+			<br>
+			<label for="vin">Create Date：</label> 
+			<input class="form-control input-sm" id="create_date" name="create_date" type="create_date" placeholder="create_date" size="80">
+			<br>
+			<label for="vin">Carrier Name：</label> 
+			<input class="form-control input-sm" id="carrier" name="carrier" type="carrier" placeholder="carrier" size="80">
+			<br>
+			<label for="vin">Address： </label> 
+			<input class="form-control input-sm" id="address" name="address" type="address" placeholder="address" size="80">
+			<br>
+			<div class="panel-heading">
+				<h2 class="text-uppercase">Table Info</h2>
+			</div>		
+
+			<label for="vin">Table Line 1：</label> 
+			<input class="form-control input-sm" id="tc1" name="tc1" type="tc1" placeholder="please input data and seperate with ',' " size="80">
+			<br>
+			<label for="vin">Table Line 2：</label> 
+			<input class="form-control input-sm" id="tc2" name="tc2" type="tc2" placeholder="please input data and seperate with ',' " size="80">
+			<br>
+			<label for="vin">Table Line 3：</label> 
+			<input class="form-control input-sm" id="tc3" name="tc3" type="tc3" placeholder="please input data and seperate with ',' " size="80">
+			<br>
+			<label for="vin">Table Line 4：</label> 
+			<input class="form-control input-sm" id="tc4" name="tc4" type="tc4" placeholder="please input data and seperate with ',' " size="80">
+			<br>
+			<label for="vin">Table Line 5：</label> 
+			<input class="form-control input-sm" id="tc5" name="tc5" type="tc5" placeholder="please input data and seperate with ',' " size="80">
+			<br>			
+			<label for="vin">Total Fee：</label> 
+			<input class="form-control input-sm" id="totalfee" name="totalfee" type="totalfee" placeholder="totalfee" size="80">
+			<br>
+			<select class="form-control" name="payment" id="payment">
+			         <option selected="selected">-- Select Payment Status--</option>
+			         <option >Paid</option>
+			         <option >Not Paid</option>
+			</select>
+			<br>
+			<button type=submit value="check">submit</button>
+		</div>
+		<div>		
+			<label style="font-size:26px;color:#BCF">{{error}}</label>
+		</div>
+		</form>
+		<form action="/download/">
+			<button type=submit>Download</button>
+		</form>
+	</div>
+</body>
+</html>
